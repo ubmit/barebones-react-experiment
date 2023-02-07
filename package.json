@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"serve public\" \"pnpm:build:watch\"",
+    "dev": "concurrently \"serve public\" \"pnpm:build\"",
     "start": "serve public",
     "prebuild": "rimraf ./public/*.js",
-    "build": "babel src --out-dir public --presets babel-preset-react-app/prod",
-    "build:watch": "babel --watch src --out-dir public --presets babel-preset-react-app/dev"
+    "build": "esbuild --watch src/index.tsx --bundle --outfile=./public/index.js"
   },
   "keywords": [],
   "author": "",
@@ -18,9 +17,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "7",
-    "@babel/core": "^7.0.0-0",
-    "babel-preset-react-app": "10",
+    "esbuild": "latest",
     "concurrently": "^7.6.0",
     "rimraf": "^4.1.2",
     "serve": "^14.2.0"
