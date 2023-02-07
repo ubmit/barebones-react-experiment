@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "serve public",
+    "dev": "concurrently \"serve public\" \"pnpm:build:watch\"",
+    "start": "serve public",
     "prebuild": "rimraf ./public/*.js",
-    "build": "babel src --out-dir public --presets babel-preset-react-app/prod"
+    "build": "babel src --out-dir public --presets babel-preset-react-app/prod",
+    "build:watch": "babel --watch src --out-dir public --presets babel-preset-react-app/dev"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "@babel/cli": "7",
     "@babel/core": "^7.0.0-0",
     "babel-preset-react-app": "10",
+    "concurrently": "^7.6.0",
     "rimraf": "^4.1.2",
     "serve": "^14.2.0"
   }
