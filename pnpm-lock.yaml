@@ -6,6 +6,7 @@ specifiers:
   babel-preset-react-app: '10'
   react: ^18.2.0
   react-dom: ^18.2.0
+  rimraf: ^4.1.2
   serve: ^14.2.0
 
 dependencies:
@@ -16,6 +17,7 @@ devDependencies:
   '@babel/cli': 7.20.7_@babel+core@7.20.12
   '@babel/core': 7.20.12
   babel-preset-react-app: 10.0.1
+  rimraf: 4.1.2
   serve: 14.2.0
 
 packages:
@@ -2369,6 +2371,12 @@ packages:
       is-core-module: 2.11.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+    dev: true
+
+  /rimraf/4.1.2:
+    resolution: {integrity: sha512-BlIbgFryTbw3Dz6hyoWFhKk+unCcHMSkZGrTFVAx2WmttdBSonsdtRlwiuTbDqTKr+UlXIUqJVS4QT5tUzGENQ==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /safe-buffer/5.1.2:

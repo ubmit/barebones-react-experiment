@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "serve public",
-    "build": "babel --out-dir ./public --presets babel-preset-react-app/prod"
+    "prebuild": "rimraf ./public/*.js",
+    "build": "babel src --out-dir public --presets babel-preset-react-app/prod"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "@babel/cli": "7",
     "@babel/core": "^7.0.0-0",
     "babel-preset-react-app": "10",
+    "rimraf": "^4.1.2",
     "serve": "^14.2.0"
   }
 }
