@@ -1,0 +1,23 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serve public",
+    "build": "babel --out-dir ./public --presets babel-preset-react-app/prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7",
+    "@babel/core": "^7.0.0-0",
+    "babel-preset-react-app": "10",
+    "serve": "^14.2.0"
+  }
+}
